@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 스타일 사용자 정의 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    width: 100%;
+    font-family: 'suite', 'sans-serif';
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+img {
+    border:0;
+}
+.wrap {
+    clear:both;
+    width: 100%;
+}
+.wrap::after {
+    content:"";
+    display:block;
+    width:100%;
+    clear:both;
+}

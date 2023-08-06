@@ -1,0 +1,142 @@
+.hd {
+    clear: both;
+    position: relative;
+    width: 100vw;
+    height: 90px;
+}
+.hd_wrap {
+    clear: both;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.logo {
+    clear: both;
+    display: block;
+    float: left;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 180px;
+    height: 50px;
+}
+.logo img {
+    float: left;
+    width: auto;
+    height: 100%;
+    margin-right: 10px;
+}
+.logo .logo_title {
+    line-height: 50px;
+    font-family: 'LOTTERIACHAB' ,'sans-serif';
+    font-size: 25px;
+    color: #81c147;
+}
+
+.gnb {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 480px;
+    height: 50px;
+    margin-left: -240px;
+}
+.gnb .menu {
+    clear: both;
+    height: 50px;
+    position: relative;
+}
+.gnb .menu::after {
+    content: "";
+    clear: both;
+    width: 100%;
+    display: block;
+}
+.gnb .menu li {
+    float: left;
+    width: 25%;
+    position: relative;
+    height: 50px;
+}
+.gnb .menu li .sub {
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    opacity: 0;
+    width: 120px;
+    height: 100px;
+    top: 55px;
+    left: 0;
+    z-index: 999;
+    transition: 0.3s;
+}
+.gnb .menu li a.dp1 {
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+.gnb .menu li:hover a.dp1 {
+    border-bottom:2px solid #70AD47;
+    font-weight: bold;
+    color:#70AD47;
+}
+.gnb .menu li:hover .sub {
+    visibility: visible;
+    height: 140px;
+    opacity:1;
+}
+.gnb .menu li .sub li {
+    padding-left:0px;
+    line-height: 34px;
+    clear:both;
+    width:120px;
+}
+.gnb .menu li .sub li a {
+    display:block;
+    width: 120px;
+    text-align: center;
+    line-height: 34px;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+.gnb .menu li .sub li:hover a {
+    background-color:#A9D18E;
+}
+
+.search {
+    position: absolute;
+    margin-top: 25px;
+    right: 80px;
+}
+.search_zone {
+    position: relative;
+    width: 150px;
+}
+.search_zone .search_area {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+}
+.search .search_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: -10px;
+    cursor: pointer;
+}
+.search .search_icon:hover {
+    width: 22px;
+    height: 22px;
+    transition: 0.8s;
+}

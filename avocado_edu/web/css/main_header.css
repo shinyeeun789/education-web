@@ -59,23 +59,17 @@
     z-index: -1;
     width: 100vw;
 }
-.slide_menu::after {
-    content: "";
-    clear: both;
-    display: block;
-    width: 100%;
-}
 .vs {
     clear:both;
     width:100%;
-    min-height:600px;
+    min-height:500px;
     position:relative;
     overflow:hidden;
 }
 .img_box {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
 }
 .img_box li {
@@ -84,11 +78,11 @@
     transition-duration: 0.7s;
     transition-delay: 0.1s;
     width: 100%;
-    height: 600px;
+    height: 500px;
 }
 .img_box li .bg_box {
     width: 100vw;
-    height: 600px;
+    height: 500px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -101,8 +95,7 @@
     z-index:6;
 }
 .img_box li.item1 .bg_box {
-    background-image: url("../images/vs1.png");
-    opacity: 80%;
+    background-image: url("../images/vs1.jpg");
 }
 .img_box li.item2 .bg_box {
     background-image: url("../images/vs2.jpg");
@@ -147,8 +140,8 @@
     left: 132px;
 }
 .btn_box li.active .vs_btn {
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: #aaa;
+    border: 2px solid #aaa;
 }
 
 .vs_ra {
@@ -174,4 +167,40 @@
 }
 .play_btn.active:after {
     content:"▶";
+}
+
+.menu_wrap {
+    clear: both;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    margin-left: -560px;
+}
+.menu_wrap::after {
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.menu_wrap .menu {
+    display: block;
+    float: left;
+    width: 200px;
+    margin-left: 80px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #333;
+    border-radius: 5px;
+}
+
+.menu_wrap .menu:hover {
+    width: ;
+}
+
+.menu_wrap .menu h2 {
+    margin: 10px auto;
+    font-weight: bolder;
+    font-size: 15pt;
 }

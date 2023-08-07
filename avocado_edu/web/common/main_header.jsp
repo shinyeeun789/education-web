@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%
+    String path10 = request.getContextPath();
+%>
 <div class="hd_wrap">
     <a href="test.html" class="logo">
         <img src="./images/logo_96.png" alt="아보카도 로고타입">
@@ -17,7 +20,7 @@
             <li class="item1 active">
                 <input type="radio" name="vs_ra" id="vs_ra1" class="va_ra">
                 <div class="bg_box"></div>
-                <h2 class="vs_tit"> 온라인 강의와 함께 <br>
+                <h2 class="vs_tit"> 온라인 강의로 <br>
                     지식을 키워나가요🌱 </h2>
             </li>
             <li class="item2">
@@ -29,8 +32,9 @@
         </ul>
         <ul class="btn_box">
             <li class="item1 active"><label for="vs_ra1" class="vs_btn"></label></li>
-            <li class="item1 active"><label for="vs_ra2" class="vs_btn"></label></li>
+            <li class="item2"><label for="vs_ra2" class="vs_btn"></label></li>
         </ul>
+        <button type="button" class="play_btn"></button>
     </figure>
 </div>
 <script>
@@ -81,3 +85,17 @@
         });
     });
 </script>
+<div class="menu_wrap">
+    <a href="" class="menu">
+        <h2> 로그인 하기 > </h2>
+    </a>
+    <a href="" class="menu">
+        <h2> 강의 듣기 > </h2>
+    </a>
+    <a href="" class="menu">
+        <h2> 학습 스케줄 관리 > </h2>
+    </a>
+    <a href="" class="menu">
+        <h2> 내신 계산기 > </h2>
+    </a>
+</div>

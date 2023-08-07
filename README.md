@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://github.com/shinyeeun789/education-web/assets/70800414/63718ded-5d7b-41ce-9cfd-7cc5ad9ef53f" height="250px">
+  <img src="https://github.com/shinyeeun789/education-web/assets/70800414/e6c46fea-1a97-4299-bc12-4840426e99e7" height="60px">
+
 </div>
 
 #

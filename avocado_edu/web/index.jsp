@@ -29,9 +29,17 @@
       }
     </style>
   </head>
-  <body class="wrap">
-    <header class="hd">
-      <%@include file="common/main_header.jsp"%>
-    </header>
+  <body>
+    <div class="wrap">
+      <header class="hd">
+        <%@include file="common/main_header.jsp"%>
+      </header>
+      <div class="contents">
+
+      </div>
+      <footer class="ft">
+
+      </footer>
+    </div>
   </body>
 </html>

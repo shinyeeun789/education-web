@@ -193,10 +193,12 @@
     background-color: #fff;
     box-shadow: 1px 1px 20px #333;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .menu_wrap .menu:hover {
-    width: ;
+    width: 220px;
+    line-height: 120px;
 }
 
 .menu_wrap .menu h2 {

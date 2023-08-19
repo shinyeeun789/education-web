@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%
   String path = request.getContextPath();
+  String sid = (String) session.getAttribute("id");
 %>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Publisher" content="신예은">

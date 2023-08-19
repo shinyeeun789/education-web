@@ -1,12 +1,12 @@
 .hd {
     clear: both;
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 90px;
 }
 .hd_wrap {
     clear: both;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -86,7 +86,7 @@
 }
 .gnb .menu li:hover .sub {
     visibility: visible;
-    height: 140px;
+    height: 190px;
     opacity:1;
 }
 .gnb .menu li .sub li {
@@ -111,32 +111,24 @@
     background-color:#A9D18E;
 }
 
-.search {
-    position: absolute;
-    margin-top: 25px;
-    right: 80px;
+.tnb {
+    float:right;
+    margin-right: 35px;
 }
-.search_zone {
-    position: relative;
-    width: 150px;
+
+.tnb .menu {
+    height: 40px;
+    margin-top:20px;
+    line-height: 40px;
 }
-.search_zone .search_area {
-    width: 100%;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 14px;
+
+.tnb .menu li {
+    float:left;
+    padding-left: 40px;
+    line-height: 50px;
 }
-.search .search_icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 10px;
-    right: -10px;
-    cursor: pointer;
-}
-.search .search_icon:hover {
-    width: 22px;
-    height: 22px;
-    transition: 0.8s;
+
+.tnb .menu li a {
+    font-size: 0.85em;
+    font-weight: 200;
 }

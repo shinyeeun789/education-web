@@ -273,6 +273,7 @@
             display: block;
         }
     </style>
+<<<<<<< HEAD
 </head>
 <body class="wrap">
 <header class="hd">
@@ -389,4 +390,20 @@
     <%@include file="./common/footer.jsp" %>
 </footer>
 </body>
+=======
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hd">
+        <%@include file="common/main_header.jsp"%>
+      </header>
+      <div class="contents">
+
+      </div>
+      <footer class="ft">
+
+      </footer>
+    </div>
+  </body>
+>>>>>>> 00b613e362034ef0b6c008927eb6b34315f3bab6
 </html>

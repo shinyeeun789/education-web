@@ -9,7 +9,7 @@
 ## 💻 프로젝트 소개
 
 ### 🕰 개발 기간
-2023.08 ~ 
+2023.08.01 ~ 2023.08.24
 
 ### 📚 개발 환경
 ![Java](https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white)

@@ -33,7 +33,7 @@
             clear: both;
             position: relative;
             width: 100%;
-            min-height: 500px;
+            height: 500px;
             overflow: hidden;
         }
 
@@ -69,7 +69,7 @@
         }
 
         .img_box li.item1 .bg_box {
-            background-image: url("<%=path%>/images/vs1.png");
+            background-image: url("<%=path%>/images/vs1.jpg");
         }
 
         .img_box li.item2 .bg_box {
@@ -273,137 +273,120 @@
             display: block;
         }
     </style>
-<<<<<<< HEAD
 </head>
 <body class="wrap">
-<header class="hd">
-    <%@include file="./common/header.jsp" %>
-</header>
-<div class="slide_menu">
-    <figure class="vs">
-        <ul class="img_box">
-            <li class="item1 active">
-                <input type="radio" name="vs_ra" id="vs_ra1" class="va_ra">
-                <div class="bg_box"></div>
-                <h2 class="vs_tit"> 온라인 강의로 <br>
-                    지식을 키워나가요🌱 </h2>
-            </li>
-            <li class="item2">
-                <input type="radio" name="vs_ra" id="vs_ra2" class="va_ra">
-                <div class="bg_box"></div>
-                <h2 class="vs_tit"> 학습 스케줄 도우미와 함께 <br>
-                    학습 성취도를 높여나가요🌸 </h2>
-            </li>
-        </ul>
-        <ul class="btn_box">
-            <li class="item1 active"><label for="vs_ra1" class="vs_btn"></label></li>
-            <li class="item2"><label for="vs_ra2" class="vs_btn"></label></li>
-        </ul>
-        <button type="button" class="play_btn"></button>
-    </figure>
-</div>
-<script>
-    $(function () {
-        $(".btn_box li .vs_btn").click(function () {
-            var par = $(this).parents("li").index();
-            $(".img_box li").removeClass("active");
-            $(".img_box li").eq(par).addClass("active");
-            $(".btn_box li").removeClass("active");
-            $(".btn_box li").eq(par).addClass("active");
-        });
-        var sw = 1;
-        var int1 = setInterval(function () {
-            if (sw == 1) {
-                autoplay(1);
-                sw = 0;
-            } else {
-                autoplay(0);
-                sw = 1;
-            }
-        }, 3500);
-
-        function autoplay(n) {
-            $(".img_box li").removeClass("active");
-            $(".img_box li").eq(n).addClass("active");
-            $(".btn_box li").removeClass("active");
-            $(".btn_box li").eq(n).addClass("active");
-        }
-
-        $(".play_btn").click(function () {
-            if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
-                sw = 1;
-                int1 = setInterval(function () {
-                    if (sw == 1) {
-                        autoplay(1);
-                        sw = 0;
-                    } else {
-                        autoplay(0);
-                        sw = 1;
-                    }
-                }, 3500);
-            } else {
-                $(this).addClass("active");
-                sw = 0;
-                clearInterval(int1);
-            }
-        });
-    });
-</script>
-<section class="page" id="page1">
-    <div class="page_wrap">
-        <h2 class="page_tit"> 인기 강의 </h2>
-        <ul class="pic_lst">
-            <li class="item1">
-                <a href="">
-                    <p class="pic_com">설명</p>
-                    <h3 class="pic_tit">제목</h3>
-                    <span class="pic_arrow"></span>
-                </a>
-            </li>
-            <li class="item2">
-                <a href="">
-                    <p class="pic_com">설명</p>
-                    <h3 class="pic_tit">제목</h3>
-                    <span class="pic_arrow"></span>
-                </a>
-            </li>
-            <li class="item3">
-                <a href="">
-                    <p class="pic_com">설명</p>
-                    <h3 class="pic_tit">제목</h3>
-                    <span class="pic_arrow"></span>
-                </a>
-            </li>
-            <li class="item4">
-                <a href="">
-                    <p class="pic_com">설명</p>
-                    <h3 class="pic_tit">제목</h3>
-                    <span class="pic_arrow"></span>
-                </a>
-            </li>
-        </ul>
+    <header class="hd">
+        <%@include file="./common/header.jsp" %>
+    </header>
+    <div class="slide_menu">
+        <figure class="vs">
+            <ul class="img_box">
+                <li class="item1 active">
+                    <input type="radio" name="vs_ra" id="vs_ra1" class="va_ra">
+                    <div class="bg_box"></div>
+                    <h2 class="vs_tit"> 온라인 강의로 <br>
+                        지식을 키워나가요🌱 </h2>
+                </li>
+                <li class="item2">
+                    <input type="radio" name="vs_ra" id="vs_ra2" class="va_ra">
+                    <div class="bg_box"></div>
+                    <h2 class="vs_tit"> 학습 스케줄 도우미와 함께 <br>
+                        학습 성취도를 높여나가요🌸 </h2>
+                </li>
+            </ul>
+            <ul class="btn_box">
+                <li class="item1 active"><label for="vs_ra1" class="vs_btn"></label></li>
+                <li class="item2"><label for="vs_ra2" class="vs_btn"></label></li>
+            </ul>
+            <button type="button" class="play_btn"></button>
+        </figure>
     </div>
-</section>
-</div>
-<footer>
-    <%@include file="./common/footer.jsp" %>
-</footer>
-</body>
-=======
-  </head>
-  <body>
-    <div class="wrap">
-      <header class="hd">
-        <%@include file="common/main_header.jsp"%>
-      </header>
-      <div class="contents">
+    <script>
+        $(function () {
+            $(".btn_box li .vs_btn").click(function () {
+                var par = $(this).parents("li").index();
+                $(".img_box li").removeClass("active");
+                $(".img_box li").eq(par).addClass("active");
+                $(".btn_box li").removeClass("active");
+                $(".btn_box li").eq(par).addClass("active");
+            });
+            var sw = 1;
+            var int1 = setInterval(function () {
+                if (sw == 1) {
+                    autoplay(1);
+                    sw = 0;
+                } else {
+                    autoplay(0);
+                    sw = 1;
+                }
+            }, 3500);
 
-      </div>
-      <footer class="ft">
+            function autoplay(n) {
+                $(".img_box li").removeClass("active");
+                $(".img_box li").eq(n).addClass("active");
+                $(".btn_box li").removeClass("active");
+                $(".btn_box li").eq(n).addClass("active");
+            }
 
-      </footer>
+            $(".play_btn").click(function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    sw = 1;
+                    int1 = setInterval(function () {
+                        if (sw == 1) {
+                            autoplay(1);
+                            sw = 0;
+                        } else {
+                            autoplay(0);
+                            sw = 1;
+                        }
+                    }, 3500);
+                } else {
+                    $(this).addClass("active");
+                    sw = 0;
+                    clearInterval(int1);
+                }
+            });
+        });
+    </script>
+    <section class="page" id="page1">
+        <div class="page_wrap">
+            <h2 class="page_tit"> 인기 강의 </h2>
+            <ul class="pic_lst">
+                <li class="item1">
+                    <a href="">
+                        <p class="pic_com">설명</p>
+                        <h3 class="pic_tit">제목</h3>
+                        <span class="pic_arrow"></span>
+                    </a>
+                </li>
+                <li class="item2">
+                    <a href="">
+                        <p class="pic_com">설명</p>
+                        <h3 class="pic_tit">제목</h3>
+                        <span class="pic_arrow"></span>
+                    </a>
+                </li>
+                <li class="item3">
+                    <a href="">
+                        <p class="pic_com">설명</p>
+                        <h3 class="pic_tit">제목</h3>
+                        <span class="pic_arrow"></span>
+                    </a>
+                </li>
+                <li class="item4">
+                    <a href="">
+                        <p class="pic_com">설명</p>
+                        <h3 class="pic_tit">제목</h3>
+                        <span class="pic_arrow"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
     </div>
+    <footer>
+        <%@include file="./common/footer.jsp" %>
+    </footer>
   </body>
->>>>>>> 00b613e362034ef0b6c008927eb6b34315f3bab6
 </html>

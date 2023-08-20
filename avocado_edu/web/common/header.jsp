@@ -41,7 +41,7 @@
                 <li><a href=""> 로그아웃 </a></li>
                 <li><a href=""> 마이페이지 </a></li>
             <% } else { %>
-                <li><a href=""> 로그인 </a></li>
+                <li><a href="<%=path%>/member/login.jsp"> 로그인 </a></li>
                 <li><a href=""> 회원가입 </a></li>
             <% } %>
         </ul>

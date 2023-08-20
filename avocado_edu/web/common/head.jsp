@@ -5,7 +5,6 @@
 %>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Publisher" content="신예은">
-<title>천재교육</title>
 
 <!-- 검색엔진 최적화(SEO) -->
 <meta name="Subject" content="아보카도, 특성화고등학교 학생">

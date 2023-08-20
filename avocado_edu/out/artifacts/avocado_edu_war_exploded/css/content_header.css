@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.content_header {
+    clear: both;
+    height: 250px;
+    background-image: url("../images/header_cover.jpg");
+    background-repeat: no-repeat;
+    background-position:center -300px;
+    background-size: cover;
+}
+
+.page_tit {
+    font-size:48px;
+    text-align: center;
+    padding-top:1em;
+    color:#fff;
+    padding-bottom: 2.4rem;
+}
+
+.breadcrumb {
+    clear:both;
+    width:1200px;
+    margin: 0 auto;
+    text-align: right;
+    color:#fff;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.breadcrumb a {
+    color:#fff;
+}

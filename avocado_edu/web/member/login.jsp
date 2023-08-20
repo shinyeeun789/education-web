@@ -73,7 +73,7 @@
                 margin: 0 auto;
             }
             .frm .input_wrap {
-                width: 450px;
+                width: 300px;
                 margin: 10px auto;
                 border: 1px solid #ddd;
                 border-radius: 10px;

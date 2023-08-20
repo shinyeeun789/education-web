@@ -165,7 +165,7 @@
             <form action="<%=path%>/member/loginPro.jsp" class="frm" method="post">
                 <div class="input_wrap">
                     <span class="icono-user"></span>
-                    <input type="text" id="id" name="id" placeholder="Enter your ID" autocomplete="off">
+                    <input type="text" id="id" name="id" placeholder="Enter your ID" autocomplete="off" autofocus>
                 </div>
                 <div class="input_wrap">
                     <span class="icono-lock"></span>

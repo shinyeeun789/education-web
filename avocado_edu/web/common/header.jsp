@@ -43,7 +43,7 @@
         <ul class="menu">
             <% if(sid != null) { %>
                 <li><a href="<%=path%>/member/logout.jsp"> 로그아웃 </a></li>
-                <li><a href=""> 마이페이지 </a></li>
+                <li><a href="<%=path%>/member/mypage.jsp"> 마이페이지 </a></li>
             <% } else { %>
                 <li><a href="<%=path%>/member/login.jsp"> 로그인 </a></li>
                 <li><a href="<%=path%>/member/join.jsp"> 회원가입 </a></li>

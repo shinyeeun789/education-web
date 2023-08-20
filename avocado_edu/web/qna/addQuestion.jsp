@@ -1,14 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="edu.avocado.db.*" %>
-<%@ page import="edu.avocado.dto.Board" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-cmtale=1.0">
-    <title> 게시글 작성 </title>
+    <title> 질문하기 </title>
     <%@ include file="../common/head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
@@ -117,20 +113,19 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/board/boardList.jsp?page=1"> 커뮤니티  </a> > <span> 게시글 작성하기 </span> </p>
-                <h2 class="page_tit"> 게시글 작성 </h2>
+                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/qna/qnaList.jsp?page=1"> QnA  </a> > <span> 질문하기 </span> </p>
+                <h2 class="page_tit"> 질문하기 </h2>
             </div>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <form action="<%=path%>/board/addBoardPro.jsp" class="frm1" method="post">
+                <form action="<%=path%>/qna/addQuestionPro.jsp" class="frm1" method="post">
                     <table class="tb1">
                         <tbody>
                         <tr>
                             <th><label for="title"> 제목 </label></th>
                             <td>
                                 <input type="text" id="title" name="title">
-                                <input type="hidden" id="bno" name="bno">
                             </td>
                         </tr>
                         <tr>

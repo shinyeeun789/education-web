@@ -77,9 +77,7 @@
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
 
     <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
-    <link rel="stylesheet" href="<%=path%>/css/google.css">
     <link rel="stylesheet" href="<%=path%>/css/fonts.css">
-    <link rel="stylesheet" href="<%=path%>/css/content_header.css">
 
     <!-- 필요한 플러그인 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>

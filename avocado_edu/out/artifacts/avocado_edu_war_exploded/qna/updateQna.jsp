@@ -1,14 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="edu.avocado.db.*" %>
-<%@ page import="edu.avocado.dto.Board" %>
+<%@ page import="edu.avocado.dto.*" %>
+<%@ page import="edu.avocado.vo.Qna" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-cmtale=1.0">
-    <title> 게시글 작성 </title>
+    <title> 게시글 수정 </title>
     <%@ include file="../common/head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
@@ -109,6 +110,33 @@
             margin-left: -13px;
         }
     </style>
+
+    <%
+        int qno = (request.getParameter("qno") != null) ? Integer.parseInt(request.getParameter("qno")) : 0;
+
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        // 2. DB 연결하기
+        DBC conn = new MariaDBCon();
+        con = conn.connect();
+
+        //3. SQL을 실행하여 Result(공지사항 한 레코드)을 가져오기
+        String sql = "select * from qna where qno=?";
+        pstmt = con.prepareStatement(sql);
+        pstmt.setInt(1, qno);
+        rs = pstmt.executeQuery();
+
+        //4. 가져온 한 레코드를 하나의 Board 객체에 담기
+        Qna qna  = new Qna();
+        if(rs.next()){
+            qna.setQno(rs.getInt("qno"));
+            qna.setTitle(rs.getString("title"));
+            qna.setContent(rs.getString("content"));
+        }
+        conn.close(rs, pstmt, con);
+    %>
 </head>
 <div class="container">
     <header class="hd" id="hd">
@@ -117,28 +145,28 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/board/boardList.jsp?page=1"> 커뮤니티  </a> > <span> 게시글 작성하기 </span> </p>
-                <h2 class="page_tit"> 게시글 작성 </h2>
+                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/qna/qnaList.jsp?page=1"> QnA  </a> > <span> QnA 글 수정하기 </span> </p>
+                <h2 class="page_tit"> QnA 글 수정 </h2>
             </div>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <form action="<%=path%>/board/addBoardPro.jsp" class="frm1" method="post">
+                <form action="<%=path%>/qna/updateQnaPro.jsp" class="frm1" method="post">
                     <table class="tb1">
                         <tbody>
                         <tr>
                             <th><label for="title"> 제목 </label></th>
                             <td>
-                                <input type="text" id="title" name="title">
-                                <input type="hidden" id="bno" name="bno">
+                                <input type="text" id="title" name="title" value="<%=qna.getTitle()%>">
+                                <input type="hidden" id="qno" name="qno" value="<%=qno%>">
                             </td>
                         </tr>
                         <tr>
                             <th><label for="content"> 내용 </label></th>
-                            <td><textarea name="content" id="content"></textarea></td>
+                            <td><textarea name="content" id="content"><%=qna.getContent()%></textarea></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="submit" value="작성하기"></td>
+                            <td colspan="2"><input type="submit" value="수정하기"></td>
                         </tr>
                         </tbody>
                     </table>

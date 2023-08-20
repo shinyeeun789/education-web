@@ -113,8 +113,8 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/board/boardList.jsp?page=1"> 커뮤니티  </a> > <span> 게시글 작성하기 </span> </p>
-                <h2 class="page_tit"> 게시글 작성 </h2>
+                <p><a href="<%=path %>">Home</a> &gt; <a href="<%=path %>/notice/noticeList.jsp?page=1"> 공지사항  </a> > <span> 공지사항 글 작성하기 </span> </p>
+                <h2 class="page_tit"> 공지사항 글 작성 </h2>
             </div>
         </div>
         <section class="page" id="page1">

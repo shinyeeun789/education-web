@@ -22,7 +22,11 @@
                 </ul>
             </li>
             <li class="item3">
-                <a href="" class="dp1"> 내신 계산기 </a>
+                <a href="" class="dp1"> 디자인 계열 </a>
+                <ul class="sub">
+                    <li><a href=""> 메이크업 </a></li>
+                    <li><a href=""> 헤어 </a></li>
+                </ul>
             </li>
             <li class="item4">
                 <a href="" class="dp1"> 커뮤니티 </a>
@@ -30,7 +34,7 @@
                     <li><a href="<%=path%>/board/boardList.jsp?page=1"> 커뮤니티 </a></li>
                     <li><a href="<%=path%>/notice/noticeList.jsp?page=1"> 공지사항 </a></li>
                     <li><a href="<%=path%>/qna/qnaList.jsp?page=1"> QnA </a></li>
-                    <li><a href=""> FAQ </a></li>
+                    <li><a href="<%=path%>/faq/faqList.jsp"> FAQ </a></li>
                 </ul>
             </li>
         </ul>

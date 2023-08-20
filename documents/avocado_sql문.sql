@@ -144,7 +144,33 @@ INSERT INTO qna(title, content, author, lev, par) VALUES ('질문10에 대한 �
 
 COMMIT;
 
+UPDATE qna SET par=qno WHERE par=0 AND lev=0;
+
 -- QnA 리스트
 SELECT a.qno AS qno, a.title AS title, a.content AS content, a.author AS author, a.resdate AS resdate, a.cnt AS cnt, a.lev AS lev,
        a.par AS par, b.name AS name
 FROM qna a, member b WHERE a.author=b.id ORDER BY a.par DESC, a.lev ASC, a.qno ASC;
+
+------------------------------------------------------------------------------------------------------------------------------
+-- FAQ 테이블 생성
+CREATE TABLE faq(
+  fno INT PRIMARY KEY AUTO_INCREMENT,
+  question VARCHAR(1000) NOT NULL,
+  answer VARCHAR(1000),
+  cnt INT DEFAULT 0
+);
+
+INSERT INTO faq(question, answer)
+VALUES('자주 묻는 질문1', '자주 묻는 질문에 대한 답변1입니다.');
+INSERT INTO faq(question, answer, cnt)
+VALUES('자주 묻는 질문2', '자주 묻는 질문에 대한 답변2입니다.', 5);
+INSERT INTO faq(question, answer, cnt)
+VALUES('자주 묻는 질문3', '자주 묻는 질문에 대한 답변3입니다.', 10);
+INSERT INTO faq(question, answer, cnt)
+VALUES('자주 묻는 질문4', '자주 묻는 질문에 대한 답변4입니다.', 3);
+INSERT INTO faq(question, answer, cnt)
+VALUES('자주 묻는 질문5', '자주 묻는 질문에 대한 답변5입니다.', 4);
+INSERT INTO faq(question, answer)
+VALUES('자주 묻는 질문6', '자주 묻는 질문에 대한 답변6입니다.');
+
+COMMIT;

@@ -59,35 +59,29 @@ create table comment(
 	author VARCHAR(16),
    resdate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
    content VARCHAR(200),
-   FOREIGN KEY(bno) REFERENCES motherboard(bno) ON DELETE CASCADE
+   FOREIGN KEY(bno) REFERENCES board(bno) ON DELETE CASCADE
 );
 
-SELECT * FROM mothercomment;
+SELECT * FROM comment;
 -------------------------------------------------------------------------------------------------------------------
 
 -- 공지사항(notice) 테이블 생성
 CREATE TABLE notice(
-   no INT PRIMARY KEY AUTO_INCREMENT,
-   title VARCHAR(200) NOT NULL,
-   content VARCHAR(1000),
-   author VARCHAR(16),
-   resdate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-   cnt INT DEFAULT 0);
+ nno INT PRIMARY KEY AUTO_INCREMENT,
+ title VARCHAR(200) NOT NULL,
+ content VARCHAR(1000),
+ author VARCHAR(16),
+ resdate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ cnt INT DEFAULT 0);
 
 -- 공지사항 더미글 추가 8건
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항1', '여기는 공지사항1입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항2', '여기는 공지사항2입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항3', '여기는 공지사항3입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항4', '여기는 공지사항4입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항5', '여기는 공지사항5입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항6', '여기는 공지사항6입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항7', '여기는 공지사항7입니다', 'admin');
-INSERT INTO notice(title, content, author)
-VALUES ('공지사항8', '여기는 공지사항8입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항1', '여기는 공지사항1입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항2', '여기는 공지사항2입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항3', '여기는 공지사항3입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항4', '여기는 공지사항4입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항5', '여기는 공지사항5입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항6', '여기는 공지사항6입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항7', '여기는 공지사항7입니다', 'admin');
+INSERT INTO notice(title, content, author) VALUES ('공지사항8', '여기는 공지사항8입니다', 'admin');
+
+COMMIT;

@@ -28,7 +28,7 @@
                 <a href="" class="dp1"> 커뮤니티 </a>
                 <ul class="sub">
                     <li><a href="<%=path%>/board/boardList.jsp?page=1"> 커뮤니티 </a></li>
-                    <li><a href=""> 공지사항 </a></li>
+                    <li><a href="<%=path%>/notice/noticeList.jsp?page=1"> 공지사항 </a></li>
                     <li><a href=""> QnA </a></li>
                     <li><a href=""> FAQ </a></li>
                 </ul>

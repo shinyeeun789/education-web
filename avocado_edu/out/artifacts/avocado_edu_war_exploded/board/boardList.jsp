@@ -44,7 +44,7 @@
         pageList.add(p);
     }
 
-    // 현재 페이지에 출력할 학부모 게시글 데이터만 가져오기
+    // 현재 페이지에 출력할 게시글 데이터만 가져오기
     sql = "SELECT * FROM board ORDER BY bno desc, author LIMIT ?,10 ";
     pstmt = conn.prepareStatement(sql);
     pstmt.setInt(1, 10 * (pageNo - 1));

@@ -271,7 +271,7 @@
                     <% if(sid.equals("admin") || sid.equals(bd.getAuthor())) { %>
                     <tr>
                         <td colspan="3">
-                            <a href="/board/delBoard.jsp?bno=<%=bno%>&target=board" class="btn"> 삭제 </a>
+                            <a href="/board/delBoard.jsp?bno=<%=bno%>" class="btn"> 삭제 </a>
                             <a href="/board/updateBoard.jsp?bno=<%=bno%>" class="btn"> 수정 </a>
                         </td>
                     </tr>

@@ -23,7 +23,7 @@
     conn = con.connect();
 
     // 페이징 처리 - 전체 페이지 수 구하기
-    String sql = "SELECT COUNT(*) as 'count' FROM board";
+    String sql = "SELECT COUNT(*) as 'count' FROM notice";
     pstmt = conn.prepareStatement(sql);
     rs = pstmt.executeQuery();
     if (rs.next()) {
@@ -44,23 +44,22 @@
         pageList.add(p);
     }
 
-    // 현재 페이지에 출력할 게시글 데이터만 가져오기
-    sql = "SELECT * FROM board ORDER BY bno desc, author LIMIT ?,10 ";
+    sql = "SELECT * FROM notice ORDER BY nno desc, author LIMIT ?,10 ";
     pstmt = conn.prepareStatement(sql);
     pstmt.setInt(1, 10 * (pageNo - 1));
     rs = pstmt.executeQuery();
 
-    List<Board> boardList = new ArrayList<>();
+    List<Notice> noticeList = new ArrayList<>();
     while (rs.next()) {
-        Board bd = new Board();
-        bd.setBno(rs.getInt("bno"));
-        bd.setTitle(rs.getString("title"));
-        bd.setAuthor(rs.getString("author"));
-        bd.setCnt(rs.getInt("cnt"));
+        Notice notice = new Notice();
+        notice.setNno(rs.getInt("nno"));
+        notice.setTitle(rs.getString("title"));
+        notice.setAuthor(rs.getString("author"));
+        notice.setCnt(rs.getInt("cnt"));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date d = sdf.parse(rs.getString("resdate"));
-        bd.setResdate(sdf.format(d));
-        boardList.add(bd);
+        notice.setResdate(sdf.format(d));
+        noticeList.add(notice);
     }
     con.close(rs, pstmt, conn);
 %>
@@ -71,7 +70,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학부모 커뮤니티 </title>
+    <title> 공지사항 </title>
     <%@ include file="../common/head.jsp" %>
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
@@ -163,13 +162,13 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="<%=path %>">Home</a> &gt; <span> 커뮤니티 </span></p>
-                <h2 class="page_tit"> 커뮤니티 </h2>
+                <p><a href="<%=path %>">Home</a> &gt; <span> 공지사항 </span></p>
+                <h2 class="page_tit"> 공지사항 목록 </h2>
             </div>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <p class="content_tit"> 커뮤니티 </p>
+                <p class="content_tit"> 공지사항 </p>
                 <hr>
                 <div class="board_list_wrap">
                     <div class="board_list">
@@ -180,48 +179,48 @@
                             <div class="cnt"> 조회수</div>
                             <div class="resdate"> 작성일</div>
                         </div>
-                        <% for (Board bd : boardList) { %>
+                        <% for (Notice notice : noticeList) { %>
                         <div>
-                            <div class="no"><%=bd.getBno()%>
+                            <div class="no"><%=notice.getNno()%>
                             </div>
                             <% if (sid != null) { %>
                             <div class="title">
-                                <a href="<%=path%>/board/getBoard.jsp?bno=<%=bd.getBno() %>"><%=bd.getTitle() %></a>
+                                <a href="<%=path%>/notice/getNotice.jsp?nno=<%=notice.getNno() %>"><%=notice.getTitle() %></a>
                             </div>
                             <% } else { %>
-                            <div class="title" onclick="javascript:alert('로그인 후 글을 열람할 수 있습니다.');"><%=bd.getTitle() %>
+                            <div class="title" onclick="javascript:alert('로그인 후 글을 열람할 수 있습니다.');"><%=notice.getTitle() %>
                             </div>
                             <% } %>
-                            <div class="author"><%=bd.getAuthor()%>
+                            <div class="author"><%=notice.getAuthor()%>
                             </div>
-                            <div class="cnt"><%=bd.getCnt()%>
+                            <div class="cnt"><%=notice.getCnt()%>
                             </div>
-                            <div class="resdate"><%=bd.getResdate()%>
+                            <div class="resdate"><%=notice.getResdate()%>
                             </div>
                         </div>
                         <% } %>
                         <% if (count == 0) { %>
                         <div>
-                            <p class="result"> 게시글이 없습니다 :) </p>
+                            <p class="result"> 공지사항이 없습니다 :) </p>
                         </div>
                         <% } %>
                     </div>
                     <div class="board_page">
-                        <a href="<%=path%>/board/boardList.jsp?page=1" class="bt first"> &lt;&lt; </a>
-                        <a href="<%=path%>/board/boardList.jsp?page=<%=pageNo-1 < 1 ? 1 : pageNo-1%>" class="bt prev">
+                        <a href="<%=path%>/notice/noticeList.jsp?page=1" class="bt first"> &lt;&lt; </a>
+                        <a href="<%=path%>/notice/noticeList.jsp?page=<%=pageNo-1 < 1 ? 1 : pageNo-1%>" class="bt prev">
                             &lt; </a>
                         <% for (int p : pageList) { %>
-                        <a href="<%=path%>/board/boardList.jsp?page=<%=p%>"
+                        <a href="<%=path%>/notice/noticeList.jsp?page=<%=p%>"
                            class="num <%=(p==pageNo) ? "on" : ""%>"><%=p%>
                         </a>
                         <% } %>
-                        <a href="<%=path%>/board/boardList.jsp?page=<%=pageNo+1 > totalPage ? totalPage : pageNo+1%>"
+                        <a href="<%=path%>/notice/noticeList.jsp?page=<%=pageNo+1 > totalPage ? totalPage : pageNo+1%>"
                            class="bt next"> &gt; </a>
-                        <a href="<%=path%>/board/boardList.jsp?page=<%=totalPage%>" class="bt last"> &gt;&gt; </a>
+                        <a href="<%=path%>/notice/noticeList.jsp?page=<%=totalPage%>" class="bt last"> &gt;&gt; </a>
                     </div>
                     <div class="btn_group">
-                        <% if (sid != null) { %>
-                        <a href="/board/addBoard.jsp" class="inbtn">글쓰기</a>
+                        <% if (sid != null && sid.equals("admin")) { %>
+                        <a href="/notice/addNotice.jsp" class="inbtn">글쓰기</a>
                         <% } %>
                     </div>
                 </div>

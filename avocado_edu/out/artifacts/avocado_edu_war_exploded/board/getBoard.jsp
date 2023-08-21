@@ -66,6 +66,8 @@
         cmt.setContent(rs.getString("content"));
         cList.add(cmt);
     }
+
+    conn.close(rs, pstmt, con);
 %>
 <!DOCTYPE html>
 <html lang="en">

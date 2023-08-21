@@ -3,4 +3,38 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <display-name> avocado </display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <!--    <error-page>-->
+    <!--        <error-code>404</error-code>-->
+    <!--        <location>/error/notFoundErrorPage.jsp</location>-->
+    <!--    </error-page>-->
+    <!--    <error-page>-->
+    <!--        <error-code>500</error-code>-->
+    <!--        <location>/error/errorPage.jsp</location>-->
+    <!--    </error-page>-->
+    <!--    <error-page>-->
+    <!--        <exception-type>java.lang.NumberFormatException</exception-type>-->
+    <!--        <location>/error/formatPage.jsp</location>-->
+    <!--    </error-page>-->
+    <!--    <error-page>-->
+    <!--        <exception-type>java.lang.Exception</exception-type>-->
+    <!--        <location>/error/errorPage.jsp</location>-->
+    <!--    </error-page>-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+        <url-pattern>*.webp</url-pattern>
+        <url-pattern>*.mp4</url-pattern>
+        <url-pattern>*.ogg</url-pattern>
+        <url-pattern>*.webm</url-pattern>
+    </servlet-mapping>
 </web-app>

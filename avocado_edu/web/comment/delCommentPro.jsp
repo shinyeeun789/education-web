@@ -16,6 +16,8 @@
     pstmt.setInt(1, cno);
     cnt = pstmt.executeUpdate();
 
+    con.close(pstmt, conn);
+
     if(cnt > 0) {
         response.sendRedirect("/board/getBoard.jsp?bno="+bno);
     } else { %>

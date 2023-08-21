@@ -124,6 +124,8 @@
             faq.setCnt(rs.getInt("cnt"));
             faqList.add(faq);
         }
+
+        con.close(rs, pstmt, conn);
     %>
 </head>
 <body>

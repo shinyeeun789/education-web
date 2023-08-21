@@ -24,6 +24,8 @@
     pstmt.setInt(4, par);
     cnt = pstmt.executeUpdate();
 
+    con.close(pstmt, conn);
+
     if(cnt > 0) { %>
 <script>
     alert("답변이 입력되었습니다.");

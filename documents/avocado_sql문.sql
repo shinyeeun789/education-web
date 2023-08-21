@@ -174,3 +174,70 @@ INSERT INTO faq(question, answer)
 VALUES('자주 묻는 질문6', '자주 묻는 질문에 대한 답변6입니다.');
 
 COMMIT;
+
+--------------------------------------------------------------------------------------------------------------------------
+-- 강의(lecture) 테이블 생성
+CREATE TABLE lecture(
+	lno INT AUTO_INCREMENT PRIMARY KEY,
+	lname VARCHAR(200) NOT NULL,
+	lteacher VARCHAR(50) NOT NULL,
+	lexplain VARCHAR(1000) NOT NULL,
+	filePath VARCHAR(500) NOT NULL,
+	category VARCHAR(50) CHECK (category IN ('경영','회계','프론트엔드','백엔드','데이터베이스','메이크업','헤어')),
+	likes INT DEFAULT 0);
+
+SELECT * FROM lecture;
+
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('상업경제', '김상경', '비즈니스와 경제 원리를 연구하여 기업과 시장의 동작을 이해하고, 조직과 소비자에 대한 전략을 개발할 수 있습니다', '/lecture01.jpg', '경영');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('금융실무', '이금융', '금융 업무의 기초를 다루며, 금융상품, 투자 전략, 리스크 관리 등을 학습하여 재무 분석과 금융 거래에 필요한 기술을 습득할 수 있습니다.', '/lecture02.jpg', '경영');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('회계학원론', '임회계', '회계의 기본 원리와 개념을 다루며, 재무보고서 작성, 재무상태 분석, 원가 계산 등을 통해 조직의 경제적 활동을 이해하고 분석하는 기초를 제공합니다.', '/lecture03.jpg', '회계');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('재무회계', '박재무', '기업의 재무상태, 손익계산서 등을 기록하고 보고하는 과정을 다루며, 재무정보를 통해 기업의 경제적 건강상태와 성과를 평가하는 방법을 배우는 강의입니다.', '/lecture04.jpg', '회계');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('세무회계', '김세무', '세법과 규정을 준수하며 세금 신고 및 납부 절차를 이해하는 것에 초점을 두며, 기업과 개인이 세무 요구사항을 충족시키는 데 필요한 지식과 기술을 제공하는 강의입니다.', '/lecture05.jpg', '회계');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('원가회계', '이원가', '제품 또는 서비스의 생산 비용을 추적하고 분석하는 방법을 습득할 수 있습니다. 원가 산정, 원가 분석, 가격 결정 등을 통해 효율적인 생산 및 경영 의사결정을 지원합니다.', '/lecture06.jpg', '회계');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('빠르게 배우는 HTML5와 CSS3', '박프론', '웹 개발 기초를 다루는 강의로, 웹 페이지의 구조와 디자인을 위한 HTML5와 CSS3를 학습하여 원하는 웹 사이트를 구축하는 방법을 배웁니다.', '/lecture01.jpg','프론트엔드');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('빠르게 배우는 Javascript', '박프론', '웹 페이지에 상호작용과 동적 요소를 추가하는 방법을 배우고, 사용자 경험 향상과 웹 애플리케이션 개발을 위한 프로그래밍 언어를 학습할 수 있습니다.', '/lecture02.jpg', '프론트엔드');
+INSERT INTO lecture(lname, lteacher, lexplain, filePath, category)
+VALUES('빠르게 배우는 jQuery', '박프론', '웹 개발에서 사용되는 제이쿼리 라이브러리의 활용법을 배우고, HTML 문서 조작, 이벤트 처리, 애니메이션 등을 단순화하여 웹 페이지를 동적으로 만드는 기술을 학습할 수 있습니다.','/lecture03.jpg', '프론트엔드');
+
+COMMIT;
+-----------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE lectureInfo(
+	dno INT AUTO_INCREMENT PRIMARY KEY,
+	lno INT NOT NULL,
+	title VARCHAR(500) NOT NULL,
+	filePath VARCHAR(500) NOT NULL,
+	duration VARCHAR(20) NOT NULL,
+	FOREIGN KEY lectureInfo(lno) REFERENCES lecture(lno) ON DELETE CASCADE);
+	
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[1강] HTML 소개 및 기본 구조 학습', '/lecture01', '02:30');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[2강] 제목, 단락, 줄바꿈 태그 사용법 익히기', '/lecture02', '03:25');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[3강] 목록과 링크 생성하기', '/lecture03', '04:00');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[4강] 이미지 삽입 및 이미지 링크 만들기', '/lecture01', '02:30');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[5강] 테이블 작성과 데이터 정렬 기초 학습', '/lecture02', '03:25');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[6강] 폼(Form) 요소와 입력 타입 활용', '/lecture03', '04:00');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[7강] 미디어 요소: 비디오 및 오디오 삽입하기', '/lecture01', '02:30');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[8강] 시맨틱 태그를 활용한 웹페이지 구조화', '/lecture02', '03:25');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[9강] CSS 스타일 시트 연동하기', '/lecture03', '04:00');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[10강] 웹 폰트와 아이콘 사용법', '/lecture01', '02:30');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[11강] 반응형 웹 디자인: 미디어 쿼리 및 뷰포트 설정', '/lecture02', '03:25');
+INSERT INTO lectureInfo(lno, title, filePath, duration)
+VALUES(7, '[12강] HTML5 API 활용: 지오로케이션, 웹 스토리지, 웹 워커', '/lecture03', '04:00');

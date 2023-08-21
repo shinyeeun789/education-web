@@ -19,7 +19,7 @@
     cnt = pstmt.executeUpdate();
 
     if(cnt > 0) {
-        response.sendRedirect("/qna/qnaList.jsp");
+        response.sendRedirect("/qna/qnaList.jsp?page=1");
     } else {
         out.print("<script> history.go(-1); </script>");
     }

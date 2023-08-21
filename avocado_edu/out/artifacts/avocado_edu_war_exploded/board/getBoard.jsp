@@ -183,7 +183,7 @@
             box-sizing: border-box;
             font-size: 13pt;
             resize: none;
-            font-family: 'Noto-Sans', sans-serif;
+            font-family: 'suite', Noto-Sans;
         }
         .comment_detail .sub_comment {
             position: relative;

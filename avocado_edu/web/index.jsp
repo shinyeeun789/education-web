@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="edu.avocado.db.DBC" %>
+<%@ page import="edu.avocado.db.MariaDBCon" %>
+<%@ page import="edu.avocado.dto.Lecture" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +27,30 @@
     <link rel="stylesheet" href="<%=path%>/css/header.css">
     <link rel="stylesheet" href="<%=path%>/css/index.css">
     <link rel="stylesheet" href="<%=path%>/css/footer.css">
+
+<%
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+
+    DBC con = new MariaDBCon();
+    conn = con.connect();
+    String sql = "SELECT * FROM lecture ORDER BY likes DESC LIMIT 0, 4";
+    pstmt = conn.prepareStatement(sql);
+    rs = pstmt.executeQuery();
+
+    List<Lecture> lecList = new ArrayList<>();
+    while(rs.next()) {
+        Lecture lec = new Lecture();
+        lec.setLno(rs.getInt("lno"));
+        lec.setLname(rs.getString("lname"));
+        lec.setLteacher(rs.getString("lteacher"));
+        lec.setLexplain(rs.getString("lexplain"));
+        lec.setCategory(rs.getString("category"));
+
+        lecList.add(lec);
+    }
+%>
 </head>
 <body class="wrap">
     <header class="hd">
@@ -54,34 +84,14 @@
         <div class="page_wrap">
             <h2 class="page_tit"> 인기 강의 </h2>
             <ul class="pic_lst">
-                <li class="item1">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
+                <% for(int i=0; i<lecList.size(); i++) { %>
+                <li class="item<%=i+1%>">
+                    <a href="<%=path%>/lecture/lectureInfo.jsp?lno=<%=lecList.get(i).getLno()%>&category=<%=lecList.get(i).getCategory()%>&page=1">
+                        <h3 class="pic_tit"><%=lecList.get(i).getLname()%>></h3>
                         <span class="pic_arrow"></span>
                     </a>
                 </li>
-                <li class="item2">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-                <li class="item3">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-                <li class="item4">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
+                <% } %>
             </ul>
         </div>
     </section>

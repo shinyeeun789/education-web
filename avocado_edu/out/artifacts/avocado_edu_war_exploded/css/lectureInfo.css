@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.tb1 {
+    width: 700px;
+    min-height: 220px;
+    margin: 50px auto;
+}
+
+.tb1 .img_wrap {
+    width: 250px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tb1 img {
+    width: 100%;
+    height: auto;
+}
+
+.tb1 .lecture_name {
+    line-height: 44px;
+    height: 44px;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.tb1 .teacher {
+    padding: 10px 0px 10px 20px;
+    line-height: 20px;
+    height: 20px;
+}
+
+.tb1 .content {
+    padding: 20px 0px 20px 45px;
+    line-height: 20px;
+}
+
+.tb1 .btn {
+    float: right;
+    display: block;
+    width: 150px;
+    height: 45px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #8CB964;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.tb1 .btn:hover {
+    background-color: #0B5ED7;
+}
+
+.tb1 .like_btn {
+    float: right;
+    display: block;
+    width: 200px;
+    height: 45px;
+    text-align: right;
+    line-height: 45px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+}
+
+.tb1 .like_btn:hover {
+    color: #0B5ED7;
+    font-weight: bold;
+}
+
+.tb1 tr:nth-child(4) {
+    text-align: right;
+}
+
+.board_list_wrap {
+    width: 1000px;
+    margin: 0px auto;
+    padding-bottom: 150px;
+}
+
+.board_title {
+    margin-bottom: 30px;
+}
+
+.board_title strong {
+    font-size: 3rem;
+}
+
+.board_title p {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.board_list {
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_list > div {
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+    height: 60px;
+}
+
+.board_list > div.top {
+    border-bottom: 1px solid #999;
+}
+
+.board_list > div:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.board_list > div > div {
+    float: left;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 60px;
+}
+
+.board_list > div.top > div {
+    font-weight: 600;
+    text-align: center;
+}
+
+.board_list .openLecture {
+    cursor: pointer;
+}
+
+.board_list .title {
+    width: 100%;
+}
+
+.board_list .vTitle {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.board_list .duration {
+    width: 18%;
+    text-align: center;
+}
+
+.board_list .result {
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+}
+
+.board_page {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-left: 0;
+    line-height: 32px;
+}
+
+.board_page a.bt {
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num {
+    font-size: 1rem;
+}
+
+.board_page a.num.on {
+    border-color: #8CB964;
+    background: #8CB964;
+    color: #fff;
+}
+
+.board_page a:first-child {
+    border-left: 1px solid #ddd;
+}

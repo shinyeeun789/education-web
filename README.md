@@ -18,6 +18,27 @@
 ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![ApacheTomcat](https://img.shields.io/badge/ApacheTomcat-F8DC75?style=for-the-badge&logo=ApacheTomcat&logoColor=black)
 
+<br/>
+
+## 📌 프로젝트 산출물
+### 1. Usecase Diagram
+<img width="1300" alt="usecase diagram1" src="https://github.com/shinyeeun789/education-web/assets/70800414/01942bac-7bed-436c-8080-cb9d1298d3e2">
+<img width="1300" alt="usecase diagram2" src="https://github.com/shinyeeun789/education-web/assets/70800414/9ca39252-d46a-4bc5-8f3a-0c20a33ca528">
+<img width="1300" alt="usecase diagram3" src="https://github.com/shinyeeun789/education-web/assets/70800414/28c75ac8-acb7-4b3b-ac71-4d6ccd02a6c7">
+
+### 2. 화면 설계도
+
+
+### 3. ERD
+
+
+### 4. Class Diagram
+<img width="1300" alt="class diagram" src="https://github.com/shinyeeun789/education-web/assets/70800414/ccd7d13e-bc8f-4fed-9555-a1aa6eb406f5">
+
+
+<br/>
+<br/>
+
 ## 📱 주요 기능
 ### 1. 회원 기능
 #### (1) 회원가입
@@ -27,6 +48,7 @@
 - 비로그인 시 FAQ 리스트만 접근 가능
 #### (3) 마이페이지
 - 로그인한 사용자의 개인 정보 변경 가능
+- mariaDB에 저장되어 있는 암호화된 비밀번호를 복호화하여 input에 password type으로 출력
 #### 📷 View
 <table>
   <tr>

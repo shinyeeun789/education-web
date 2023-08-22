@@ -219,3 +219,15 @@
     </td>
   </tr>
 </table>
+
+### 5. 회사소개
+#### (1) 오시는 길
+- Daum Map API를 활용하여 특정 위도와 경도의 위치를 표현
+#### 📷 View
+<table>
+  <tr>
+    <td align="center">
+      <img width="1300" alt="image" src="https://github.com/shinyeeun789/education-web/assets/70800414/e7b8510a-6798-447c-bff5-b9578a01c86c"> <br/>
+    </td>
+  </tr>
+</table>

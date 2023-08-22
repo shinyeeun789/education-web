@@ -48,6 +48,7 @@
                 <li><a href="<%=path%>/member/login.jsp"> 로그인 </a></li>
                 <li><a href="<%=path%>/member/join.jsp"> 회원가입 </a></li>
             <% } %>
+            <li><a href="<%=path%>/info/company.jsp"> 오시는 길 </a></li>
         </ul>
     </nav>
 </div>

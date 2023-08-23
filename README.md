@@ -200,7 +200,7 @@
       <sub><b> PIC4 : 질문 글 작성하기 </sub></b>
     </td>
   </tr>
-        <tr>
+  <tr>
     <td align="center">
       <img width="1300" alt="image" src="https://github.com/shinyeeun789/education-web/assets/70800414/a271417a-0c8e-42d6-b4d4-537e3f1d675a"> <br/>
       <sub><b> PIC5 : 답변 글 작성하기 </sub></b>
@@ -228,6 +228,11 @@
   <tr>
     <td align="center">
       <img width="1300" alt="image" src="https://github.com/shinyeeun789/education-web/assets/70800414/e7b8510a-6798-447c-bff5-b9578a01c86c"> <br/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="1300" alt="스크린샷 2023-08-23 171743" src="https://github.com/shinyeeun789/education-web/assets/70800414/c1a6e6d5-4aeb-472c-81f5-11e96252678b"> <br/>
     </td>
   </tr>
 </table>

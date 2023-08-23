@@ -146,8 +146,8 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="<%=path %>">Home</a> &gt; <span> 오시는 길 </span></p>
-                <h2 class="page_tit"> 오시는 길 </h2>
+                <p><a href="<%=path %>">Home</a> &gt; <span> 회사소개 </span></p>
+                <h2 class="page_tit"> 회사소개 </h2>
             </div>
         </div>
         <section class="page" id="page1">

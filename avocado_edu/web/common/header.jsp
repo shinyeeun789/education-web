@@ -7,25 +7,25 @@
     <nav class="gnb">
         <ul class="menu">
             <li class="item1">
+                <a href="" class="dp1"> 소개 </a>
+                <ul class="sub">
+                    <li><a href="<%=path%>/info/introduce.jsp"> 회사소개 </a></li>
+                    <li><a href="<%=path%>/info/company.jsp"> 오시는 길 </a></li>
+                </ul>
+            </li>
+            <li class="item2">
                 <a href="" class="dp1"> 경영 계열 </a>
                 <ul class="sub">
                     <li><a href="<%=path%>/lecture/lectureList.jsp?category=경영"> 경영 </a></li>
                     <li><a href="<%=path%>/lecture/lectureList.jsp?category=회계"> 회계 </a></li>
                 </ul>
             </li>
-            <li class="item2">
+            <li class="item3">
                 <a href="" class="dp1"> 컴퓨터공학 계열 </a>
                 <ul class="sub">
                     <li><a href="<%=path%>/lecture/lectureList.jsp?category=프론트엔드"> 프론트엔드 </a></li>
                     <li><a href="<%=path%>/lecture/lectureList.jsp?category=백엔드"> 백엔드 </a></li>
                     <li><a href="<%=path%>/lecture/lectureList.jsp?category=데이터베이스"> 데이터베이스 </a></li>
-                </ul>
-            </li>
-            <li class="item3">
-                <a href="" class="dp1"> 디자인 계열 </a>
-                <ul class="sub">
-                    <li><a href="<%=path%>/lecture/lectureList.jsp?category=메이크업"> 메이크업 </a></li>
-                    <li><a href="<%=path%>/lecture/lectureList.jsp?category=헤어"> 헤어 </a></li>
                 </ul>
             </li>
             <li class="item4">
@@ -52,7 +52,6 @@
                 <li><a href="<%=path%>/member/login.jsp"> 로그인 </a></li>
                 <li><a href="<%=path%>/member/join.jsp"> 회원가입 </a></li>
             <% } %>
-            <li><a href="<%=path%>/info/company.jsp"> 오시는 길 </a></li>
         </ul>
     </nav>
 </div>

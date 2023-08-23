@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_list_wrap {
+    width: 1000px;
+    margin: 0px auto;
+    padding-bottom: 150px;
+}
+
+.board_title {
+    margin-bottom: 30px;
+}
+
+.board_title strong {
+    font-size: 3rem;
+}
+
+.board_title p {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.board_list {
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_list > div {
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+    height: 60px;
+}
+
+.board_list > div.top {
+    border-bottom: 1px solid #999;
+}
+
+.board_list > div:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.board_list > div > div {
+    float: left;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 60px;
+}
+
+.board_list > div.top > div {
+    font-weight: 600;
+}
+
+.board_list .id {
+    width: 30%;
+}
+
+.board_list .name {
+    width: 30%;
+}
+
+.board_list .date {
+    width: 30%;
+}
+
+.board_list .kick {
+    width: 10%;
+    height: 30px;
+}
+
+.board_list button {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #8CB964;
+    border: 1px solid #8CB964;
+    color: #fff;
+    cursor: pointer;
+}
+
+.board_list .result {
+    padding: 25px;
+    text-align: center;
+    font-size: 13pt;
+}
+
+.board_list .bno {
+    width: 10%;
+}
+
+.board_list .title {
+    width: 35%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.board_list .qTitle {
+    width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.board_list .author {
+    width: 15%;
+}
+
+.board_list .resdate {
+    width: 20%;
+}
+
+.board_list .modify {
+    width: 10%;
+    height: 30px;
+}
+
+.board_list .delete {
+    width: 10%;
+    height: 30px;
+}
+
+.board_list .addAnswer {
+    width: 10%;
+    height: 30px;
+}
+
+.board_page {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-left: 0;
+    line-height: 32px;
+}
+
+.board_page a.bt {
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num {
+    font-size: 1rem;
+}
+
+.board_page a.num.on {
+    border-color: #8CB964;
+    background: #8CB964;
+    color: #fff;
+}
+
+.board_page a:first-child {
+    border-left: 1px solid #ddd;
+}

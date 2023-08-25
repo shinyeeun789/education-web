@@ -27,7 +27,7 @@
 <img width="1300" alt="usecase diagram3" src="https://github.com/shinyeeun789/education-web/assets/70800414/28c75ac8-acb7-4b3b-ac71-4d6ccd02a6c7">
 
 ### 2. 화면 설계도
-화면 설계 링크 : https://ovenapp.io/view/JWrQHuEthPSUtPzJw18KRBkI6qvziHP8/
+화면 설계 링크 : https://ovenapp.io/view/kqNoJGz4tNM76HCoGLTreUfdLWn49gzj/
 
 
 ### 3. ERD

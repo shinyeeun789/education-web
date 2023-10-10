@@ -23,7 +23,7 @@
     con.close(pstmt, conn);
 
     if(cnt > 0) {
-        response.sendRedirect("/board/getBoard.jsp?bno="+bno);
+        response.sendRedirect(request.getContextPath() + "/board/getBoard.jsp?bno="+bno);
     } else { %>
 <script>
     alert("문제가 발생했습니다. 잠시 후 시도해주세요");

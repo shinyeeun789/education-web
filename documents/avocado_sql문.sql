@@ -1,7 +1,9 @@
+CREATE DATABASE avocado;
+
 USE avocado;
 
 -- 한글 깨짐 처리
-ALTER DATABASEado DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
+ALTER DATABASE avocado DEFAULT CHARACTER SET utf8 COLLATE UTF8_GENERAL_CI;
 ALTER TABLE member CONVERT TO CHARSET UTF8;
 
 -- 회원(member) 테이블 생성
@@ -31,21 +33,27 @@ CREATE TABLE board(
 
 -- 게시판 더미글 추가 8건
 INSERT INTO board(title, content, author)
-VALUES ('게시판1', '여기는 게시판1입니다', 'admin');
+VALUES ('고3 학생인데, 대학입시 고민이 많아요 😥', '안녕하세요, 고3 학생입니다. 대학 입시 어떻게 준비하고 계신가요? 조언 부탁드립니다!', 'kim');
 INSERT INTO board(title, content, author)
-VALUES ('게시판2', '여기는 게시판2입니다', 'shin');
+VALUES ('취업 준비 중인데 이력서 작성 팁 좀 알려주세요!', '안녕하세요! 취업 준비 중이고 이력서 작성에 어려움을 겪고 있어요. 조언 부탁드려요!', 'shin');
 INSERT INTO board(title, content, author)
-VALUES ('게시판3', '여기는 게시판3입니다', 'shin');
+VALUES ('요즘 핫한 웹툰 추천 좀 해주세요!', '안녕하세요! 최근에 핫한 웹툰 있나요? 추천 부탁드려요!', 'shin');
 INSERT INTO board(title, content, author)
-VALUES ('게시판4', '여기는 게시판4입니다', 'admin');
+VALUES ('여름 휴가 어디로 놀러갈까요? 😊', '안녕하세요! 여름 휴가 어디로 가기 좋은지 아이디어 주세요! 고민이에요.', 'kim');
 INSERT INTO board(title, content, author)
-VALUES ('게시판5', '여기는 게시판5입니다', 'admin');
+VALUES ('집에서 하는 취미 추천해주세요!', '안녕하세요!  집에서 할 수 있는 취미 뭐가 있을까요? 공유해주세요!', 'kim');
 INSERT INTO board(title, content, author)
-VALUES ('게시판6', '여기는 게시판6입니다', 'shin');
+VALUES ('맛있는 음식점 추천 부탁드려요!', '안녕하세요! 맛있는 음식점 어디에 있나요? 추천 부탁드립니다!', 'shin');
 INSERT INTO board(title, content, author)
-VALUES ('게시판7', '여기는 게시판7입니다', 'admin');
+VALUES ('자격증 공부 중인데 어떤 자격증이 유용할까요?', '안녕하세요! 자격증 공부 중인데, 어떤 자격증이 취업에 유용한지 조언 부탁드립니다!', 'shin');
 INSERT INTO board(title, content, author)
-VALUES ('게시판8', '여기는 게시판8입니다', 'admin');
+VALUES ('연애 관련 고민 상담 좀 해주세요 😭', '안녕하세요. 연애 관련해서 고민이 많아서 상담 좀 부탁드립니다.', 'kim');
+INSERT INTO board(title, content, author)
+VALUES ('여행 갈 때 필수 아이템 추천해주세요!', '안녕하세요! 여행 갈 때 꼭 가져가야 할 필수 아이템이 있나요? 알려주세요!', 'kim');
+INSERT INTO board(title, content, author)
+VALUES ('다가오는 시험에 대비해서 공부 계획 짜는 방법 알려주세요!', '안녕하세요! 다가오는 시험에 대비해서 효과적인 공부 계획 짜는 방법이 있을까요? 도움 부탁드립니다!', 'shin');
+INSERT INTO board(title, content, author)
+VALUES ('대학생활 중 어떤 동아리에 가입하면 좋을까요?', '안녕하세요! 대학생활 중 어떤 동아리가 유익하고 즐겁게 활동할 수 있는지 추천 부탁드려요!', 'kim');
 
 COMMIT;
 

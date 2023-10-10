@@ -3,6 +3,7 @@
 <%@ page import="edu.avocado.util.*" %>
 <%@ page import="edu.avocado.db.*" %>
 <%
+    String path = request.getContextPath();
     String id = request.getParameter("id");
     String pw = request.getParameter("pw");
     String db_pw = null;
@@ -27,12 +28,12 @@
             session.setAttribute("name", rs.getString("name"));
             db_pw = AES256.decryptAES256(rs.getString("pw"), "%02x");
             if(pw.equals(db_pw)) {
-                response.sendRedirect("/");
+                response.sendRedirect(path + "/");
             } else {
-                response.sendRedirect("/member/login.jsp");
+                response.sendRedirect(path + "/member/login.jsp");
             }
         } else {
-            response.sendRedirect("/member/login.jsp");
+            response.sendRedirect(path + "/member/login.jsp");
         }
     } catch(SQLException e) {
         System.out.println("SQL 구문이 처리되지 못했습니다.");
